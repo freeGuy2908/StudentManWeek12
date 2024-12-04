@@ -1,0 +1,23 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.studentmanweek12.MainFragment"
+        android:label="Danh sách sinh viên">
+        <action
+            android:id="@+id/action_main_to_student"
+            app:destination="@id/studentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.studentmanweek12.StudentFragment"
+        android:label="Thêm/Sửa sinh viên">
+        <action
+            android:id="@+id/action_student_to_main"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
